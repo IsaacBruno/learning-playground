@@ -1,5 +1,10 @@
 const reducer = (state=0, action) => {
-  return state;
+  switch (action.type) {
+    case 'INCREMENT':
+      return state + 1;
+    default:
+      return state;
+  }
 };
 
 export default reducer;
