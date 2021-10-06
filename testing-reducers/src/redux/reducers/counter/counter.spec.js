@@ -25,4 +25,10 @@ describe('counter reducer', () => {
     const result = counterReducer(2, { type: 'DECREMENT' });
     expect(result).toBe(1);
   });
+
+  test('should return the initial state if the action do not exist', () => {
+    const initialState = 16;
+    const result = counterReducer(initialState, { type: 'SOMETHING' });
+    expect(result).toBe(initialState);
+  });
 });
