@@ -20,4 +20,9 @@ describe('counter reducer', () => {
     const result = counterReducer(0, { type: 'DECREMENT' });
     expect(result).toBe(-1);
   });
+
+  test('should handle DECREMENT and then leads to the correct counter number', () => {
+    const result = counterReducer(2, { type: 'DECREMENT' });
+    expect(result).toBe(1);
+  });
 });
