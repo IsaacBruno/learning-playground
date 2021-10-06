@@ -15,4 +15,9 @@ describe('counter reducer', () => {
     const result = counterReducer(1, { type: 'INCREMENT' });
     expect(result).toBe(2);
   });
+
+  test('should handle DECREMENT', () => {
+    const result = counterReducer(0, { type: 'DECREMENT' });
+    expect(result).toBe(-1);
+  });
 });
